@@ -34,7 +34,7 @@
                         <td>{{ $i++ }}</td>
                         <td>{{ $row['nama'] }}</td>
                         <td>Rp <span>{{ number_format($row['harga_sewa'], 0, ',', '.') }}</span></td>
-                        <td><img src="{{asset('landingpage/'.$row['foto'])}}" width="100" height="100"></td>
+                        <td><img src="{{secure_asset('landingpage/'.$row['foto'])}}" width="100" height="100"></td>
                         <input type="hidden" name="harga_sewa[]" class="harga_sewa" value="{{ $row['harga_sewa'] }}">
                         <input type="hidden" name="id_barang[]" value="{{ $row['id_barang'] }}">
                     </tr>

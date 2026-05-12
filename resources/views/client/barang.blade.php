@@ -18,7 +18,7 @@
         @foreach($data as $row)
         <div class="box">
           <div class="img-box">
-            <img src="{{ asset('landingpage/'.$row->foto)}}" alt="" width="200" height="200">
+            <img src="{{ secure_asset('landingpage/'.$row->foto)}}" alt="" width="200" height="200">
           </div>
           <div class="mt-2">
             <p>

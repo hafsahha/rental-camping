@@ -8,7 +8,7 @@
 <section class=" slider_section position-relative">
       <div class="slider_container">
         <div class="img-box">
-          <img src="{{asset('landingpage/images/hero-img.jpg')}}" alt="">
+          <img src="{{secure_asset('landingpage/images/hero-img.jpg')}}" alt="">
         </div>
         <div class="detail_container">
           <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
@@ -80,7 +80,7 @@
       <div class="car_container">
         <div class="box">
           <div class="img-box">
-            <img src="{{asset('landingpage/images/c-1.png')}}" alt="">
+            <img src="{{secure_asset('landingpage/images/c-1.png')}}" alt="">
           </div>
           <div class="detail-box">
             <h5>
@@ -94,7 +94,7 @@
         </div>
         <div class="box">
           <div class="img-box">
-            <img src="{{asset('landingpage/images/c-2.png')}}" alt="">
+            <img src="{{secure_asset('landingpage/images/c-2.png')}}" alt="">
           </div>
           <div class="detail-box">
             <h5>
@@ -108,7 +108,7 @@
         </div>
         <div class="box">
           <div class="img-box">
-            <img src="{{asset('landingpage/images/c-3.png')}}" alt="">
+            <img src="{{secure_asset('landingpage/images/c-3.png')}}" alt="">
           </div>
           <div class="detail-box">
             <h5>
@@ -162,7 +162,7 @@
       @foreach ($barang as $item)
         <div class="box">
           <div class="img-box">
-            <img src="{{ asset('landingpage/'.$item->foto) }}" alt="{{ $item->nama }}" width="200" height="200">
+            <img src="{{ secure_asset('landingpage/'.$item->foto) }}" alt="{{ $item->nama }}" width="200" height="200">
           </div>
           <div class="mt-2">
             <p>
@@ -203,7 +203,7 @@
     <div class="content_box">
       <div class="box">
         <div class="img-box">
-          <img src="{{asset('landingpage/images/u-1.png')}}" alt="">
+          <img src="{{secure_asset('landingpage/images/u-1.png')}}" alt="">
         </div>
         <div class="detail-box">
           <h5>Mudah</h5>
@@ -211,7 +211,7 @@
       </div>
       <div class="box">
         <div class="img-box">
-          <img src="{{asset('landingpage/images/u-2.png')}}" alt="">
+          <img src="{{secure_asset('landingpage/images/u-2.png')}}" alt="">
         </div>
         <div class="detail-box">
           <h5>Aman</h5>
@@ -219,7 +219,7 @@
       </div>
       <div class="box">
         <div class="img-box">
-          <img src="{{asset('landingpage/images/u-3.png')}}" alt="">
+          <img src="{{secure_asset('landingpage/images/u-3.png')}}" alt="">
         </div>
         <div class="detail-box">
           <h5>Nyaman</h5>

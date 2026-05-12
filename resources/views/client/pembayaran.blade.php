@@ -54,14 +54,14 @@
                                     <td>Rp {{ number_format($rentLog->total_denda, 0, ',', '.') }}</td>
                                     <td>
                                         @if($rentLog->bukti_penyerahan)
-                                            <a href="{{ asset('storage/' . $rentLog->bukti_penyerahan) }}" target="_blank">Lihat Bukti</a>
+                                            <a href="{{ secure_asset('storage/' . $rentLog->bukti_penyerahan) }}" target="_blank">Lihat Bukti</a>
                                         @else
                                             Tidak Ada Bukti
                                         @endif
                                     </td>
                                     <td>
                                         @if($rentLog->bukti_pengembalian)
-                                            <a href="{{ asset('storage/' . $rentLog->bukti_pengembalian) }}" target="_blank">Lihat Bukti</a>
+                                            <a href="{{ secure_asset('storage/' . $rentLog->bukti_pengembalian) }}" target="_blank">Lihat Bukti</a>
                                         @else
                                             Tidak Ada Bukti
                                         @endif
@@ -84,7 +84,7 @@
         </h2><br>
         
             <div class="text-center">
-                <img src="{{ asset('landingpage/images/qris.jpg') }}" class="img-fluid" alt="QRIS Payment">
+                <img src="{{ secure_asset('landingpage/images/qris.jpg') }}" class="img-fluid" alt="QRIS Payment">
             </div>
         
     </div><br><br>

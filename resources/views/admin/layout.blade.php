@@ -13,21 +13,21 @@
   <meta name="author" content="" />
 
   <title>Rent4u</title>
-  <script src="{{asset('landingpage/js/jquery-3.4.1.min.js')}}"></script>
+  <script src="{{secure_asset('landingpage/js/jquery-3.4.1.min.js')}}"></script>
   <!-- slider stylesheet -->
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
 
   <!-- bootstrap core css -->
-  <link rel="stylesheet" type="text/css" href="{{ asset('landingpage/css/bootstrap.css') }}" />
+  <link rel="stylesheet" type="text/css" href="{{ secure_asset('landingpage/css/bootstrap.css') }}" />
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 
   <!-- fonts style -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:400,600,700&display=swap" rel="stylesheet">
 
   <!-- Custom styles for this template -->
-  <link href="{{ asset('landingpage/css/style.css')}}" rel="stylesheet" />
+  <link href="{{ secure_asset('landingpage/css/style.css')}}" rel="stylesheet" />
   <!-- responsive style -->
-  <link href="{{ asset('landingpage/css/responsive.css')}}" rel="stylesheet" />
+  <link href="{{ secure_asset('landingpage/css/responsive.css')}}" rel="stylesheet" />
   
   <style>
     .navbar-brand {
@@ -48,7 +48,7 @@
       <div class="container-fluid">
         <nav class="navbar navbar-expand-lg custom_nav-container">
           <a class="navbar-brand" href="#">
-            <img src="{{ asset('landingpage/images/logo.png') }}" alt="Logo">
+            <img src="{{ secure_asset('landingpage/images/logo.png') }}" alt="Logo">
             <span style="font-size: 24px; font-weight: bold; text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);">
               RENT 4 U
             </span>
@@ -99,8 +99,8 @@
   </footer>
   <!-- footer section -->
 
-  <script src="{{asset('landingpage/js/bootstrap.js')}}"></script>
+  <script src="{{secure_asset('landingpage/js/bootstrap.js')}}"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-  <script src="{{asset('landingpage/js/custom.js')}}"></script>
+  <script src="{{secure_asset('landingpage/js/custom.js')}}"></script>
 </body>
 </html>

@@ -55,7 +55,7 @@
         </div>
         @endif
         <div class="text-center">
-            <img src="{{ asset('landingpage/images/logo.png') }}" alt="Logo">
+            <img src="{{ secure_asset('landingpage/images/logo.png') }}" alt="Logo">
         </div>
         <div class="login-box">
             <h2 class="text-center mb-4">Login</h2>

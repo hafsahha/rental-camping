@@ -14,7 +14,7 @@
             <div class="row">
                 <div class="col-md-4">
                     @if($barang->foto)
-                        <img src="{{ asset('landingpage/' . $barang->foto) }}" alt="{{ $barang->nama }}" class="img-fluid">
+                        <img src="{{ secure_asset('landingpage/' . $barang->foto) }}" alt="{{ $barang->nama }}" class="img-fluid">
                     @else
                         <p>Tidak ada foto yang tersedia.</p>
                     @endif
