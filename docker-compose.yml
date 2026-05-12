@@ -1,0 +1,38 @@
+version: '3.9'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: rental-camping-app
+    working_dir: /var/www/html
+    ports:
+      - "10000:10000"
+    environment:
+      - APP_NAME=Rental Camping
+      - APP_ENV=production
+      - APP_DEBUG=false
+      - APP_KEY=base64:9vGAjxyUFgDVpRCB7vkl7kbmd7jRV+IADifA3Nc+3Pc=
+      - APP_URL=http://localhost:10000
+      - DB_CONNECTION=mysql
+      - DB_HOST=gateway01.ap-southeast-1.prod.alicloud.tidbcloud.com
+      - DB_PORT=4000
+      - DB_DATABASE=test
+      - DB_USERNAME=3p1sp9pXF2BdqED.root
+      - DB_PASSWORD=pPMfkfPvX7RYU0d6
+      - MYSQL_ATTR_SSL_CA=/etc/ssl/certs/ca-certificates.crt
+      - SESSION_DRIVER=cookie
+      - CACHE_DRIVER=array
+      - QUEUE_CONNECTION=sync
+      - LOG_CHANNEL=stderr
+      - PORT=10000
+    volumes:
+      - .:/var/www/html
+    networks:
+      - rental-camping-network
+    restart: unless-stopped
+
+networks:
+  rental-camping-network:
+    driver: bridge
