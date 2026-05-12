@@ -46,11 +46,12 @@ return [
         'mysql' => [
             'driver' => 'mysql',
             'url' => env('DATABASE_URL'),
-            'host' => env('DB_HOST', 'gateway01.ap-southeast-1.prod.alicloud.tidbcloud.com'),
-            'port' => env('DB_PORT', '4000'),
-            'database' => env('DB_DATABASE', 'test'),
-            'username' => env('DB_USERNAME', '3p1sp9pXF2BdqED.root'),
-            'password' => env('DB_PASSWORD', 'pPMfkfPvX7RYU0d6'),
+            'driver' => 'mysql',
+            'host' => env('DB_HOST', '127.0.0.1'),
+            'port' => env('DB_PORT', '3306'),
+            'database' => env('DB_DATABASE', 'forge'),
+            'username' => env('DB_USERNAME', 'forge'),
+            'password' => env('DB_PASSWORD', ''),
             'unix_socket' => env('DB_SOCKET', ''),
             'charset' => 'utf8mb4',
             'collation' => 'utf8mb4_unicode_ci',
@@ -58,9 +59,12 @@ return [
             'prefix_indexes' => true,
             'strict' => true,
             'engine' => null,
-            'options' => extension_loaded('pdo_mysql') ? array_filter([
-                PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
-            ]) : [],
+            'options' => [
+                // Ini akan memaksa PDO menggunakan SSL
+                PDO::MYSQL_ATTR_SSL_CA => true,
+                // Penting untuk lingkungan cloud/docker agar tidak gagal verifikasi cert
+                PDO::MYSQL_ATTR_SSL_VERIFY_SERVER_CERT => false,
+            ],
         ],
 
         'pgsql' => [
