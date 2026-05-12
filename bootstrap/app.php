@@ -1,5 +1,8 @@
 <?php
 
+if (isset($_SERVER['VERCEL_URL'])) {
+    $app->useStoragePath('/tmp/storage');
+}
 /*
 |--------------------------------------------------------------------------
 | Create The Application
@@ -14,10 +17,6 @@
 $app = new Illuminate\Foundation\Application(
     $_ENV['APP_BASE_PATH'] ?? dirname(__DIR__)
 );
-
-if (env('APP_ENV') === 'production') {
-    $app->useStoragePath('/tmp/storage');
-}
 
 /*
 |--------------------------------------------------------------------------
